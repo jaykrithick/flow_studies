@@ -34,12 +34,45 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body:
-          Center(), // This trailing comma makes auto-formatting nicer for build methods.
+    return MaterialApp(
+      home: Scaffold(
+          body: Container(
+        decoration:
+            const BoxDecoration(color: Color.fromARGB(255, 233, 233, 233)),
+        child: Column(
+          children: [
+            //Image.asset()
+            Row(
+              children: [
+                Container(
+                    margin: const EdgeInsets.all(8),
+                    height: 166,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/flow_studies_logo.png',
+                        width: 160 * 2,
+                        height: 90 * 2,
+                      ),
+                    )),
+                Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 166,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Text(
+                      "tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"),
+                )
+              ],
+            )
+          ],
+        ),
+      )),
     );
   }
 }
